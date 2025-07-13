@@ -1,0 +1,210 @@
+@media (max-width: 600px) {
+  /* General body and container adjustments */
+  body, html {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100vw !important;
+    overflow-x: hidden !important;
+    background: #f9fafb !important;
+  }
+  
+  /* App main layout */
+  main, .main, .AppLayout-main {
+    padding: 8px 0 64px 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    min-height: 0 !important;
+    width: 100vw !important;
+    background: #fff !important;
+  }
+
+  /* Header adjustments */
+  header {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-height: 56px !important;
+    padding: 0 8px !important;
+  }
+  
+  header .logoText {
+    font-size: 16px !important;
+  }
+  
+  /* Ensure navigation links are visible and properly sized on mobile */
+  header nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+    align-items: center;
+  }
+  
+  header nav a {
+    font-size: 12px !important;
+    padding: 4px 6px !important;
+    min-width: auto !important;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+  }
+  
+  header nav a svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  
+  header .profileSection {
+    min-width: 0 !important;
+  }
+  
+  /* Hide user name on very small screens to save space */
+  header .userName {
+    display: none !important;
+  }
+
+  /* Sidebar: slide-in/out, overlay, hamburger always visible */
+  nav[style*="position: fixed"] {
+    width: 80vw !important;
+    max-width: 320px !important;
+    min-width: 180px !important;
+    left: -100vw !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    z-index: 1000 !important;
+    transition: left 0.3s !important;
+    box-shadow: 2px 0 12px 0 rgba(60,60,120,0.18) !important;
+    padding: 32px 0 0 0 !important;
+  }
+  nav[style*="width: 220px"] {
+    left: 0 !important;
+  }
+  nav button[title] {
+    left: 12px !important;
+    top: 12px !important;
+    font-size: 32px !important;
+    z-index: 1100 !important;
+  }
+  nav .logout {
+    font-size: 15px !important;
+    padding: 8px 0 !important;
+  }
+
+  /* Hide sidebar links if sidebar is closed - only target sidebar nav, not header nav */
+  nav[style*="position: fixed"]:not([style*="width: 220px"]) a, 
+  nav[style*="position: fixed"]:not([style*="width: 220px"]) button.logout, 
+  nav[style*="position: fixed"]:not([style*="width: 220px"]) div {
+    display: none !important;
+  }
+
+  /* Main page containers */
+  .container, .card, .chatWrapper, .profileSection, .featureCard, .tipsSection, .plans, .plan, .testimonialSection, .testimonialCard {
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    width: 100vw !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 12px 4vw !important;
+    margin: 0 !important;
+  }
+
+  /* Hero section on HomePage */
+  .hero {
+    padding: 24px 4vw !important;
+    border-radius: 0 !important;
+    margin-bottom: 18px !important;
+  }
+  .heroTitle {
+    font-size: 28px !important;
+  }
+  .heroSubtitle {
+    font-size: 15px !important;
+    margin-bottom: 18px !important;
+  }
+  .ctaButton {
+    font-size: 16px !important;
+    padding: 12px 18px !important;
+    border-radius: 10px !important;
+  }
+
+  /* Features grid */
+  .featuresGrid {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  .featureCard {
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    margin: 0 0 12px 0 !important;
+    padding: 16px 4vw !important;
+  }
+
+  /* Forms and inputs */
+  form, .form {
+    padding: 12px 0 !important;
+    gap: 12px !important;
+  }
+  input, select, textarea, button {
+    font-size: 16px !important;
+    border-radius: 8px !important;
+    padding: 12px 10px !important;
+  }
+
+  /* Chat page adjustments */
+  .chatWrapper, .chatBox {
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 8px 2vw !important;
+    font-size: 15px !important;
+  }
+  .bubble {
+    font-size: 15px !important;
+    padding: 10px 12px !important;
+  }
+  .avatar {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* Footer */
+  footer {
+    height: 48px !important;
+    font-size: 13px !important;
+    padding: 0 8px !important;
+    border-radius: 0 !important;
+    box-shadow: 0 -1px 4px 0 rgba(60,60,120,0.06) !important;
+  }
+
+  /* Hide non-essential decorative elements */
+  .bgDecor, .bgDecor2 {
+    display: none !important;
+  }
+}
+
+/* Additional styles for very small screens */
+@media (max-width: 480px) {
+  header {
+    padding: 0 4px !important;
+  }
+  
+  header nav {
+    gap: 1px !important;
+  }
+  
+  header nav a {
+    font-size: 10px !important;
+    padding: 3px 4px !important;
+  }
+  
+  header nav a svg {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  
+  /* Hide navigation text on very small screens, show only icons */
+  header nav a span {
+    display: none !important;
+  }
+}

@@ -57,16 +57,47 @@ The assignment includes templates for setting up GitHub Actions workflows:
 - `frontend-cd.yml`: Deploys the frontend to your chosen platform
 - `backend-cd.yml`: Deploys the backend to your chosen platform
 
-## Submission
+## ✅ Submission & Evidence of Completion
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+All objectives for Week 7 have been met. See below for evidence and documentation:
 
-1. Complete all deployment tasks
-2. Set up CI/CD pipelines with GitHub Actions
-3. Deploy both frontend and backend to production
-4. Document your deployment process in the README.md
-5. Include screenshots of your CI/CD pipeline in action
-6. Add URLs to your deployed applications
+### ✔️ Deployment URLs
+- **Frontend (React) Live URL:** [https://eduedge.netlify.app](https://eduedge.netlify.app)
+- **Backend (Express API) Live URL:** [https://homework-helper-backend.onrender.com](https://homework-helper-backend.onrender.com)
+
+### ✔️ CI/CD Pipeline
+- Automated with GitHub Actions (`.github/workflows/mern-ci-cd.yml`)
+- Runs tests, linting, builds, and deploys both frontend and backend on every push to `main`
+- Health checks run after deployment
+
+#### CI/CD Pipeline Screenshots
+![CI/CD Pipeline Screenshot 1](screenshots/cicd-1.png)
+![CI/CD Pipeline Screenshot 2](screenshots/cicd-2.png)
+
+### ✔️ Environment Variables
+- Templates provided: `client/.env.example`, `server/.env.example`
+- All sensitive keys and URLs are managed via environment variables and GitHub secrets
+
+### ✔️ Monitoring & Health Checks
+- Health check endpoints implemented and tested (`/api/health`)
+- Automated uptime checks in CI/CD pipeline
+- (Optional) Error tracking and performance monitoring can be set up with Sentry or similar
+
+### ✔️ Maintenance & Documentation
+- Regular updates and patches planned
+- Database backups and rollback procedures documented
+- This README.md contains all deployment and maintenance instructions
+
+### ✔️ Objective Checklist
+- [x] Production-ready React frontend (build, code splitting, env vars)
+- [x] Production-ready Express backend (error handling, security, logging, env vars)
+- [x] MongoDB Atlas setup and connection pooling
+- [x] Backend deployed to Render/Railway/Heroku
+- [x] Frontend deployed to Vercel/Netlify/GitHub Pages
+- [x] CI/CD with GitHub Actions (test, lint, build, deploy)
+- [x] Health checks and monitoring
+- [x] Environment variable templates
+- [x] Documentation and screenshots
 
 ## Resources
 
@@ -75,4 +106,4 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [Render Documentation](https://render.com/docs)
 - [Railway Documentation](https://docs.railway.app/)
 - [Vercel Documentation](https://vercel.com/docs)
-- [Netlify Documentation](https://docs.netlify.com/) 
+- [Netlify Documentation](https://docs.netlify.com/)
